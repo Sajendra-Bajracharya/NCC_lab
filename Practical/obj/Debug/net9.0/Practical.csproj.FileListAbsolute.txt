@@ -1,0 +1,14 @@
+D:\NCCC\Practical\bin\Debug\net9.0\Practical.exe
+D:\NCCC\Practical\bin\Debug\net9.0\Practical.deps.json
+D:\NCCC\Practical\bin\Debug\net9.0\Practical.runtimeconfig.json
+D:\NCCC\Practical\bin\Debug\net9.0\Practical.dll
+D:\NCCC\Practical\bin\Debug\net9.0\Practical.pdb
+D:\NCCC\Practical\obj\Debug\net9.0\Practical.GeneratedMSBuildEditorConfig.editorconfig
+D:\NCCC\Practical\obj\Debug\net9.0\Practical.AssemblyInfoInputs.cache
+D:\NCCC\Practical\obj\Debug\net9.0\Practical.AssemblyInfo.cs
+D:\NCCC\Practical\obj\Debug\net9.0\Practical.csproj.CoreCompileInputs.cache
+D:\NCCC\Practical\obj\Debug\net9.0\Practical.dll
+D:\NCCC\Practical\obj\Debug\net9.0\refint\Practical.dll
+D:\NCCC\Practical\obj\Debug\net9.0\Practical.pdb
+D:\NCCC\Practical\obj\Debug\net9.0\Practical.genruntimeconfig.cache
+D:\NCCC\Practical\obj\Debug\net9.0\ref\Practical.dll

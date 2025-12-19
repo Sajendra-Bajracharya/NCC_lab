@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "Seesion_and_cookie/1.0.0": {
+        "runtime": {
+          "Seesion_and_cookie.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Seesion_and_cookie/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

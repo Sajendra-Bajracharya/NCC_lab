@@ -1,0 +1,80 @@
+﻿@model Calculator.Models.CalculatorModel
+
+@{
+    ViewData["Title"] = "Home Page - Calculator";
+}
+
+<div class="text-center mb-4">
+    <h1 class="display-4">Welcome to the Calculator App</h1>
+    <p>Perform basic arithmetic operations below</p>
+</div>
+
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card shadow">
+            <div class="card-header bg-primary text-white">
+                <h2 class="mb-0">
+                    <i class="bi bi-calculator"></i> Simple Calculator
+                </h2>
+            </div>
+            <div class="card-body">
+                <form asp-controller="Home" asp-action="Calculate" method="post">
+                    <div class="mb-3">
+                        <label asp-for="Number1" class="form-label"></label>
+                        <input asp-for="Number1" class="form-control" type="number" step="any" placeholder="Enter first number" />
+                        <span asp-validation-for="Number1" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="Operation" class="form-label"></label>
+                        <select asp-for="Operation" class="form-select">
+                            <option value="">-- Select Operation --</option>
+                            <option value="+">+ (Addition)</option>
+                            <option value="-">- (Subtraction)</option>
+                            <option value="*">* (Multiplication)</option>
+                            <option value="/">&divide; (Division)</option>
+                        </select>
+                        <span asp-validation-for="Operation" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="Number2" class="form-label"></label>
+                        <input asp-for="Number2" class="form-control" type="number" step="any" placeholder="Enter second number" />
+                        <span asp-validation-for="Number2" class="text-danger"></span>
+                    </div>
+
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-primary btn-lg">
+                            <i class="bi bi-calculator-fill"></i> Calculate
+                        </button>
+                    </div>
+                </form>
+
+                @if (Model.Result.HasValue)
+                {
+                    <div class="alert alert-success mt-4" role="alert">
+                        <h4 class="alert-heading">
+                            <i class="bi bi-check-circle"></i> Result
+                        </h4>
+                        <hr>
+                        <p class="mb-0 fs-3">
+                            <strong>@Model.Number1 @Model.Operation @Model.Number2 = @Model.Result.Value</strong>
+                        </p>
+                    </div>
+                }
+
+                @if (!string.IsNullOrEmpty(Model.ErrorMessage))
+                {
+                    <div class="alert alert-danger mt-4" role="alert">
+                        <i class="bi bi-exclamation-triangle"></i>
+                        <strong>Error:</strong> @Model.ErrorMessage
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

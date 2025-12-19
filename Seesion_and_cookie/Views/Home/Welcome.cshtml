@@ -1,0 +1,12 @@
+﻿@{
+    ViewData["Title"] = "Welcome";
+}
+
+<h2>Welcome Page</h2>
+
+@if (TempData["Message"] != null)
+{
+    <p style="color:green">@TempData["Message"]</p>
+}
+
+<p>Hello, <strong>@ViewBag.Name</strong></p>

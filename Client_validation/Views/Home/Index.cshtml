@@ -1,0 +1,63 @@
+﻿@model Client_validation.Models.UserRegistration
+
+@{
+    ViewData["Title"] = "Home";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Registration</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style>
+        .error {
+            color: red;
+            font-size: 12px;
+        }
+
+        .success {
+            color: green;
+            font-size: 14px;
+        }
+
+        input {
+            margin-bottom: 10px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>Registration Form</h2>
+
+        @if (ViewBag.Message != null)
+        {
+            <div class="success">@ViewBag.Message</div>
+        }
+
+        <form id="registrationForm" asp-action="Register" method="post">
+
+            <input type="text"
+                   id="Email"
+                   name="Email"
+                   placeholder="Email"
+                   value="@(Model?.Email ?? string.Empty)" />
+
+            <span id="emailError" class="error"></span>
+
+            <input type="password"
+                   id="Password"
+                   name="Password"
+                   placeholder="Password" />
+
+            <span id="passwordError" class="error"></span>
+
+            <button type="submit">Register</button>
+        </form>
+    </div>
+</body>
+</html>

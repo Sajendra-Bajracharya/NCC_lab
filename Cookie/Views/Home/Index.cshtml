@@ -1,0 +1,42 @@
+﻿@{
+    ViewData["Title"] = "Theme Selection";
+    var theme = ViewBag.Theme;
+}
+
+<style>
+    body.light {
+        background-color: #ffffff;
+        color: #000000;
+    }
+
+    body.dark {
+        background-color: #121212;
+        color: #ffffff;
+    }
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        document.body.className = "@theme".toLowerCase();
+    });
+</script>
+
+<h2>Select Theme</h2>
+
+<form method="post" asp-action="SetTheme">
+    <label>
+        <input type="radio" name="theme" value="Light" @(theme == "Light" ? "checked" : "") />
+        Light
+    </label><br />
+
+    <label>
+        <input type="radio" name="theme" value="Dark" @(theme == "Dark" ? "checked" : "") />
+        Dark
+    </label><br /><br />
+
+    <button type="submit">Save Theme</button>
+</form>
+
+<hr />
+
+<a href="/Home/Product?id=101">Go to Product Page</a>
